@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { View, TextInput, Button, Text } from 'react-native-web';
 import { loginUser } from './contexts/auth/auth-actions';
-import { useAuthDispatch } from './contexts/auth/aut-context';
-import { useNavigate, useLocation } from 'react-router-native';
+import { useAuthDispatch } from './contexts/auth/auth-context';
+import { useNavigate, useLocation, Link } from 'react-router-native';
 
 const LoginComp = () => {
   const [email, setEmail] = useState('');
@@ -41,6 +41,8 @@ const LoginComp = () => {
       />
       <Button title='Login' onPress={handleLogin} />
      {errored && <Text style={{color: 'red'}}>Invalid Credentials!</Text>}
+     {/* <View><Text>New User?</Text><Link to='/register'>Sign-up!</Link></View> */}
+     <Link to='/register'><Text style={{color: 'blue'}}>New? Sign-up here!</Text></Link>
     </View>
   );
 };
