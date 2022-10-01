@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3001/api';
+const BASE_URL = 'http://23.239.16.175:3001/api';
 
 export const addUser = async (dispatch, userData, token, user) => {
   const requestOptions = {

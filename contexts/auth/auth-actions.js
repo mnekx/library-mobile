@@ -1,8 +1,7 @@
 // Context/actions.js
 
 
-// const ROOT_URL = 'http://23.239.16.175:3001/api';
-const ROOT_URL = 'http://localhost:3001/api';
+const ROOT_URL = 'http://23.239.16.175:3001/api';
 
 export async function loginUser(dispatch, loginPayload) {
   const requestOptions = {
