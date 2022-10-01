@@ -1,4 +1,4 @@
-import { useAuthState } from '../contexts/auth/aut-context';
+import { useAuthState } from '../contexts/auth/auth-context';
 import { Navigate, useLocation } from 'react-router-native';
 
 export const ProtectedRoute = ({ children }) => {
