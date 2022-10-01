@@ -1,6 +1,6 @@
 import { View, Button, StyleSheet } from 'react-native-web';
 import { Link, NavLink, useNavigate } from 'react-router-native';
-import { useAuthDispatch } from "./contexts/auth/aut-context";
+import { useAuthDispatch } from "./contexts/auth/auth-context";
 import { logout } from "./contexts/auth/auth-actions";
 
 const AppHeaderComp = () => {
@@ -12,10 +12,10 @@ const AppHeaderComp = () => {
   return (
     <View style={styles.container}>
       <Button
-        onPress={() => navigate('/register')}
-        title='Register'
+        onPress={() => navigate('/users')}
+        title='Users'
         color='#841584'
-        accessibilityLabel='Register'
+        accessibilityLabel='Users'
       />
 
       <Button
@@ -26,10 +26,10 @@ const AppHeaderComp = () => {
       />
 
       <Button
-        onPress={() => navigate('/login')}
-        title='Login'
+        onPress={() => navigate('/add-user')}
+        title='New user'
         color='#841584'
-        accessibilityLabel='Login'
+        accessibilityLabel='new user'
       />
 
       <Button
