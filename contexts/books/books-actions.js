@@ -32,10 +32,12 @@ export const deleteBook = async (dispatch, id, token, user) => {
   dispatch({ type: 'LOADING' });
   let response = await fetch(`${BASE_URL}/books/${id}`, requestOptions);
   let data = await response.json();
-  if (data._id) {
+  if (data?.acknowledged){
     dispatch({ type: 'DELETED', id });
     return data;
   }
+
+  console.log(id)
 
   if (data.error) {
     dispatch({ type: 'ERRORED', error: data.error });
@@ -75,7 +77,6 @@ export const editBook = async (dispatch, book, id, token, user) => {
       dispatch({ type: 'LOADING' });
       let response = await fetch(`${BASE_URL}/books/${id}`, requestOptions);
       let data = await response.json();
-      console.log(data)
       if (data.acknowledged) {
         dispatch({ type: 'EDITED', id, payload: data });
         return data;
