@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button, ScrollView, TextInput, Text, View } from 'react-native-web';
 import { useParams } from 'react-router-native';
-import { useAuthState } from '../../contexts/auth/aut-context';
+import { useAuthState } from '../../contexts/auth/auth-context';
 import { editBook } from '../../contexts/books/books-actions';
 import {
   useBooksDispatchContext,
