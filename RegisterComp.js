@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { View, TextInput, Button } from 'react-native-web';
+import { View, TextInput, Button, Text } from 'react-native-web';
+import { Link } from "react-router-native";
 
 const RegisterComp = () => {
     const [mail, setMail] = useState('')
@@ -21,6 +22,7 @@ const RegisterComp = () => {
         name='password'
       />
       <Button title='Register'/>
+      <Link to='/login'><Text style={{color: 'blue'}}>Login here!</Text></Link>
     </View>
   );
 };
