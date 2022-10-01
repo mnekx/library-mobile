@@ -5,6 +5,7 @@ export const initialState = {
 };
 
 export const booksReducer = (prev, action) => {
+  console.log(action)
   switch (action.type) {
     case 'ADDED':
       return {
