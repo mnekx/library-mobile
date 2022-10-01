@@ -6,20 +6,7 @@ import {
 } from '../../contexts/books/books-context';
 import BookItemComp from './BookItemComp';
 import { getBooks } from '../../contexts/books/books-actions';
-import { useAuthState } from '../../contexts/auth/aut-context';
-const books = [
-  { title: 'No Longer At Ease', author: 'Chinua Achebe' },
-  { title: 'Okonkwo', author: 'Chinua Achebe' },
-  { title: 'An Image of Africa', author: 'Chinua Achebe' },
-  { title: 'Things Fall Apart', author: 'Ben Okri' },
-  { title: 'Arrow of God', author: 'Camara Laye' },
-  { title: 'An Image of Africa', author: 'Flora Nwapa' },
-  { title: 'Home and Exile', author: 'Cypria Ekwensi' },
-  { title: 'The Voter', author: 'Buchi Amecheta' },
-  { title: 'Hopes and Impediments', author: 'Nwando Achebe' },
-  { title: 'Vengful Creditor', author: 'Chimamanda Ngozi Adichie' },
-  { title: 'Things Fall Apart', author: 'Wole Soyinka' },
-];
+import { useAuthState } from '../../contexts/auth/auth-context';
 
 const BooksComp = () => {
   const dispatch = useBooksDispatchContext();
