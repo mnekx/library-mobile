@@ -13,7 +13,7 @@ export const initialAuthState = {
 };
 
 export const authReducer = (prev, action) => {
-  console.log(action)
+  
   switch (action.type) {
     case 'LOGIN_REQUESTED':
       return {
